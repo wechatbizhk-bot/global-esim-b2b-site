@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Build Your Order — Wholesale eSIM | Global eSIM</title>
+<meta name="description" content="Configure a wholesale eSIM or travel SIM order: choose destinations, data bundle, quantity and format, and get a costed indicative order summary you can download and print.">
+<meta name="theme-color" content="#0A1020">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://www.example.com/order.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Build Your Order — Wholesale eSIM | Global eSIM">
+<meta property="og:description" content="Configure a pilot or first production order and get a costed indicative summary.">
+<meta property="og:image" content="assets/img/logo.svg">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html">
+      <img class="brand-mark" src="assets/img/logo.svg" alt="" width="34" height="34">
+      <span class="brand-text">
+        <span class="brand-name" data-brand-name>Global eSIM</span>
+        <span class="brand-sub">B2B Wholesale</span>
+      </span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main navigation">
+      <a href="about.html"    data-i18n="nav.background">eSIM Background</a>
+      <a href="market.html"   data-i18n="nav.market">Market Potential</a>
+      <a href="solutions.html" data-i18n="nav.solutions">Partner Solutions</a>
+      <a href="coverage.html" data-i18n="nav.coverage">Coverage &amp; Rates</a>
+      <a href="videos.html"   data-i18n="nav.videos">Videos</a>
+      <a href="faq.html"      data-i18n="nav.faq">FAQ</a>
+      <a href="contact.html"  data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <div class="lang" data-lang-switcher></div>
+      <a class="btn btn-primary btn-sm" href="demo.html" data-i18n="cta.bookDemo">Book a demo</a>
+      <a class="btn btn-ghost btn-sm" href="order.html" data-i18n="cta.placeOrder">Build an order</a>
+      <button class="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero-compact">
+    <div class="wrap">
+      <div class="breadcrumb"><a href="index.html">Home</a> / <span data-i18n="nav.order">Place an Order</span></div>
+      <span class="eyebrow">Online order</span>
+      <h1 data-i18n="order.heading">Build your order</h1>
+      <p class="lead" data-i18n="order.lead">Configure a pilot or a first production order. You will get a costed summary you can download, print and send to your finance team.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+
+      <form data-lead-form data-form-title="Order request" data-order-builder autocomplete="on">
+
+        <!-- Hidden configuration, kept in sync by order.js so a submitted
+             order always carries the full configuration. -->
+        <div hidden>
+          <input type="hidden" name="order_plan_type" data-order-field="plan_type" data-label="Plan type">
+          <input type="hidden" name="order_format" data-order-field="sim_format" data-label="SIM format">
+          <input type="hidden" name="order_branding" data-order-field="branding" data-label="Branding">
+          <input type="hidden" name="bundle_gb_per_user" data-order-field="bundle_gb" data-label="Bundle per user (GB)">
+          <input type="hidden" name="quantity" data-order-field="quantity" data-label="Quantity">
+          <input type="hidden" name="destination_count" data-order-field="destination_count" data-label="Number of destinations">
+          <input type="hidden" name="destinations" data-order-field="destinations" data-label="Destinations">
+          <input type="hidden" name="blended_rate_hkd_per_gb" data-order-field="blended_rate_hkd_per_gb" data-label="Blended rate (HKD/GB)">
+          <input type="hidden" name="indicative_total_hkd" data-order-field="indicative_total_hkd" data-label="Indicative total (HKD)">
+        </div>
+
+        <div class="order-layout">
+
+          <!-- ================================================ LEFT COLUMN -->
+          <div>
+
+            <!-- STEP 1 -->
+            <section class="order-step">
+              <div class="order-step-head">
+                <span class="n">1</span>
+                <h2 data-i18n="order.planType">Is this a new purchase or a top-up?</h2>
+              </div>
+              <div class="opt-grid">
+                <label class="opt">
+                  <input type="radio" name="planType" value="new" checked data-label="Plan type">
+                  <span class="opt-body">
+                    <span class="opt-title" data-i18n="order.planNew">New purchase</span>
+                    <span class="opt-desc" data-i18n="order.planNewHint">A new eSIM or SIM card. Physical cards require shipping.</span>
+                  </span>
+                </label>
+                <label class="opt">
+                  <input type="radio" name="planType" value="topup" data-label="Plan type">
+                  <span class="opt-body">
+                    <span class="opt-title" data-i18n="order.planTopup">Top-up an existing eSIM</span>
+                    <span class="opt-desc" data-i18n="order.planTopupHint">Add data to a card the customer already has. Nothing is shipped.</span>
+                  </span>
+                </label>
+              </div>
+            </section>
+
+            <!-- STEP 2 -->
+            <section class="order-step">
+              <div class="order-step-head">
+                <span class="n">2</span>
+                <h2 data-i18n="order.destinations">Select destinations</h2>
+              </div>
+
+              <div class="chips mb-2" data-dest-regions></div>
+
+              <div class="dest-picker">
+                <div class="dest-head">
+                  <span class="search-box">
+                    <span data-icon="search"></span>
+                    <input type="search" data-dest-search placeholder="Search a country, city or network partner…" aria-label="Search destinations">
+                  </span>
+                  <button type="button" class="btn btn-ghost btn-sm" data-dest-all>Select all</button>
+                  <button type="button" class="btn btn-ghost btn-sm" data-dest-clear>Clear</button>
+                </div>
+                <div class="dest-list" data-dest-list>
+                  <div class="dest-empty">Loading coverage…</div>
+                </div>
+              </div>
+              <p class="tiny muted" style="margin:10px 0 22px">Rates shown are the lowest indicative partner rate per country. Rates for a multi-country bundle are blended across your selection.</p>
+
+              <div class="form-grid">
+                <div class="field">
+                  <label for="bundleGB" data-i18n="order.bundle">Data bundle per user</label>
+                  <select id="bundleGB" name="bundleGB" data-label="Bundle per user">
+                    <option value="1">1 GB</option>
+                    <option value="3">3 GB</option>
+                    <option value="5" selected>5 GB</option>
+                    <option value="10">10 GB</option>
+                    <option value="20">20 GB</option>
+                    <option value="50">50 GB</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="quantity" data-i18n="order.quantity">How many users or cards?</label>
+                  <input id="quantity" name="quantity" type="number" min="1" step="1" value="1000" inputmode="numeric">
+                  <div class="chips" style="margin-top:7px">
+                    <button type="button" class="chip" data-qty-preset="500">500</button>
+                    <button type="button" class="chip" data-qty-preset="1000">1,000</button>
+                    <button type="button" class="chip" data-qty-preset="5000">5,000</button>
+                    <button type="button" class="chip" data-qty-preset="20000">20,000</button>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- STEP 3 -->
+            <section class="order-step" data-step-format>
+              <div class="order-step-head">
+                <span class="n">3</span>
+                <h2 data-i18n="order.simFormat">Which format do you need?</h2>
+              </div>
+              <div class="opt-grid">
+                <label class="opt">
+                  <input type="radio" name="format" value="esim" checked data-label="SIM format">
+                  <span class="opt-body">
+                    <span class="opt-title" data-i18n="order.formatEsim">eSIM only</span>
+                    <span class="opt-desc" data-i18n="order.formatEsimHint">No inventory, no shipping, provisioned on demand.</span>
+                  </span>
+                </label>
+                <label class="opt">
+                  <input type="radio" name="format" value="physical" data-label="SIM format">
+                  <span class="opt-body">
+                    <span class="opt-title" data-i18n="order.formatPhysical">eSIM + physical SIM</span>
+                    <span class="opt-desc" data-i18n="order.formatPhysicalHint">Physical cards are shipped to your address.</span>
+                  </span>
+                </label>
+              </div>
+
+              <h3 style="margin-top:24px;font-size:.95rem" data-i18n="order.branding">Branding</h3>
+              <div class="opt-grid">
+                <label class="opt">
+                  <input type="radio" name="branding" value="standard" checked data-label="Branding">
+                  <span class="opt-body">
+                    <span class="opt-title" data-i18n="order.brandingStandard">Standard</span>
+                    <span class="opt-desc">Global eSIM artwork and packaging.</span>
+                  </span>
+                </label>
+                <label class="opt">
+                  <input type="radio" name="branding" value="white" data-label="Branding">
+                  <span class="opt-body">
+                    <span class="opt-title">White label</span>
+                    <span class="opt-desc" data-i18n="order.brandingWhite">White label — our design team will contact you</span>
+                  </span>
+                </label>
+              </div>
+            </section>
+
+            <!-- STEP 4 -->
+            <section class="order-step">
+              <div class="order-step-head">
+                <span class="n">4</span>
+                <h2 data-i18n="order.step4">Your details</h2>
+              </div>
+
+              <div class="form-grid">
+                <div class="field">
+                  <label for="name" data-i18n="form.name">Your name</label>
+                  <input id="name" name="name" type="text" required autocomplete="name" data-label="Contact name">
+                </div>
+                <div class="field">
+                  <label for="company" data-i18n="form.company">Company</label>
+                  <input id="company" name="company" type="text" required autocomplete="organization" data-label="Company">
+                </div>
+                <div class="field">
+                  <label for="email" data-i18n="form.email">Business email</label>
+                  <input id="email" name="email" type="email" required autocomplete="email" data-label="Email">
+                </div>
+                <div class="field">
+                  <label for="phone" data-i18n="form.phone">Phone or WhatsApp</label>
+                  <input id="phone" name="phone" type="tel" autocomplete="tel" data-label="Phone / WhatsApp">
+                </div>
+                <div class="field">
+                  <label for="country" data-i18n="form.country">Country or region</label>
+                  <input id="country" name="country" type="text" autocomplete="country-name" data-label="Country or region">
+                </div>
+                <div class="field">
+                  <label for="launch" data-i18n="order.step3">Target launch</label>
+                  <input id="launch" name="target_launch" type="text" placeholder="e.g. Q2 2026" data-label="Target launch">
+                </div>
+                <div class="field full">
+                  <label for="notes" data-i18n="form.message">Notes for our team</label>
+                  <textarea id="notes" name="notes" placeholder="Anything we should know — existing platform, shipping address, pilot scope, questions about the rate card…" data-label="Notes"></textarea>
+                </div>
+                <div class="field full">
+                  <label class="check">
+                    <input type="checkbox" name="consent" required data-label="Consent given">
+                    <span data-i18n="form.consent">I agree to be contacted about this enquiry.</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="btn-row mt-3">
+                <button class="btn btn-primary btn-lg" type="submit" data-i18n="order.requestQuote">Send this order to Global eSIM</button>
+                <a class="btn btn-ghost btn-lg" href="enquiry.html" data-i18n="cta.enquireNow">Make an enquiry</a>
+              </div>
+              <p class="tiny muted" style="margin:12px 0 0">Sending this order does not create a contract. We will confirm network availability and volume pricing, then issue a binding quotation.</p>
+            </section>
+
+          </div>
+
+          <!-- =============================================== RIGHT COLUMN -->
+          <aside>
+            <div class="summary">
+              <div class="summary-head">
+                <h2 data-i18n="order.summary">Order summary</h2>
+              </div>
+              <div class="summary-body" data-sum-body>
+                <p class="summary-empty">Select at least one destination to see indicative pricing.</p>
+              </div>
+              <div class="summary-foot" data-sum-foot></div>
+            </div>
+          </aside>
+
+        </div>
+      </form>
+
+      <!-- Generated order summary appears here -->
+      <div class="mt-4" data-order-output></div>
+
+      <div class="form-status" data-form-status role="status" aria-live="polite"></div>
+
+      <div class="callout mt-4">
+        <div class="callout-title"><span data-icon="info"></span> How this order is priced</div>
+        <p class="mb-0">The blended rate is the average of the lowest indicative partner rate across the destinations you selected, in HKD per gigabyte. Data cost is that rate multiplied by the bundle size and the quantity. SIM card pricing follows the volume tiers: HK$5 per card from 500–4,999 pieces, HK$4 from 5,000–19,999, and HK$3 from 20,000 upwards. A partner deposit from HK$20,000 applies and is credited against your first orders. Every figure here is indicative; your signed partner agreement is definitive.</p>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <img class="brand-mark" src="assets/img/logo.svg" alt="" width="34" height="34">
+          <span class="brand-text">
+            <span class="brand-name" data-brand-name>Global eSIM</span>
+            <span class="brand-sub">B2B Wholesale</span>
+          </span>
+        </a>
+        <p class="small" data-brand-tagline style="margin-top:14px;max-width:36ch"></p>
+        <div class="social mt-2" data-social></div>
+      </div>
+
+      <div>
+        <h3 data-i18n="footer.quickLinks">Quick links</h3>
+        <ul class="footer-list">
+          <li><a href="about.html" data-i18n="nav.background">eSIM Background</a></li>
+          <li><a href="market.html" data-i18n="nav.market">Market Potential</a></li>
+          <li><a href="solutions.html" data-i18n="nav.solutions">Partner Solutions</a></li>
+          <li><a href="coverage.html" data-i18n="nav.coverage">Coverage &amp; Rates</a></li>
+          <li><a href="videos.html" data-i18n="nav.videos">Videos</a></li>
+          <li><a href="faq.html" data-i18n="nav.faq">FAQ</a></li>
+          <li><a href="order.html" data-i18n="nav.order">Place an Order</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 data-i18n="footer.getInTouch">Get in touch</h3>
+        <ul class="footer-list">
+          <li><a data-contact="email" href="#">commercialisation.ai@gmail.com</a></li>
+          <li>WhatsApp: <a data-contact="whatsapp" href="#">+852 9739 8018</a></li>
+          <li>WeChat: <strong data-contact="wechat">ZhuangChengHK</strong></li>
+          <li><span data-i18n="footer.hours">Business hours</span>: <span data-contact="hours"></span></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 data-i18n="footer.legal">Legal</h3>
+        <ul class="footer-list">
+          <li><a href="privacy.html" data-i18n="footer.privacy">Privacy policy</a></li>
+          <li><a href="terms.html" data-i18n="footer.terms">Terms of use</a></li>
+          <li><a href="demo.html" data-i18n="cta.bookDemo">Book a demo</a></li>
+          <li><a href="enquiry.html" data-i18n="nav.enquiry">Enquiry</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> <span data-brand-name>Global eSIM</span>. <span data-i18n="footer.rights">All rights reserved.</span></span>
+    </div>
+    <p class="footer-disclaimer" data-i18n="footer.disclaimer">Rates and commercial terms shown on this site are indicative and subject to confirmation in a signed partner agreement.</p>
+  </div>
+</footer>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/i18n.en.js"></script>
+<script src="assets/js/i18n.zh-TW.js"></script>
+<script src="assets/js/i18n.zh-CN.js"></script>
+<script src="assets/js/i18n.ja.js"></script>
+<script src="assets/js/i18n.ko.js"></script>
+<script src="assets/js/i18n.fr.js"></script>
+<script src="assets/js/i18n.es.js"></script>
+<script src="assets/js/coverage-data.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/form.js"></script>
+<script src="assets/js/order.js"></script>
+</body>
+</html>

@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>eSIM Background — Global eSIM</title>
+<meta name="description" content="What an eSIM actually is: the embedded eUICC, GSMA remote provisioning under SGP.22 with SM-DP+ and the LPA, how SGP.32 differs, eSIM versus physical SIM, device support, SIM registration and our Hong Kong and Guangzhou network background.">
+<meta name="theme-color" content="#0A1020">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://www.example.com/about.html">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="eSIM Background — Global eSIM">
+<meta property="og:description" content="A plain-English technical background: the eUICC, GSMA SGP.22 remote provisioning, SGP.32 for IoT, device support and SIM-registration rules.">
+<meta property="og:image" content="assets/img/logo.svg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html">
+      <img class="brand-mark" src="assets/img/logo.svg" alt="" width="34" height="34">
+      <span class="brand-text">
+        <span class="brand-name" data-brand-name>Global eSIM</span>
+        <span class="brand-sub">B2B Wholesale</span>
+      </span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main navigation">
+      <a href="about.html"    data-i18n="nav.background">eSIM Background</a>
+      <a href="market.html"   data-i18n="nav.market">Market Potential</a>
+      <a href="solutions.html" data-i18n="nav.solutions">Partner Solutions</a>
+      <a href="coverage.html" data-i18n="nav.coverage">Coverage &amp; Rates</a>
+      <a href="videos.html"   data-i18n="nav.videos">Videos</a>
+      <a href="faq.html"      data-i18n="nav.faq">FAQ</a>
+      <a href="contact.html"  data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <div class="lang" data-lang-switcher></div>
+      <a class="btn btn-primary btn-sm" href="demo.html" data-i18n="cta.bookDemo">Book a demo</a>
+      <a class="btn btn-ghost btn-sm" href="order.html" data-i18n="cta.placeOrder">Build an order</a>
+      <button class="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============================================================ HERO -->
+  <section class="hero-compact">
+    <div class="wrap">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html" data-i18n="nav.home">Home</a> / eSIM Background</nav>
+      <span class="eyebrow">Technology background</span>
+      <h1>What an eSIM actually is, and how it really works</h1>
+      <p class="lead">If you have heard the word eSIM but never had it explained properly, this page is the explanation. No hype, no acronym soup for its own sake — just the chip, the standard that provisions it, the devices that support it, and the regulatory ground it sits on. Read it once and you will be able to hold your own in any conversation with a supplier or a technical team.</p>
+    </div>
+  </section>
+
+  <!-- ====================================================== WHAT IT IS -->
+  <section class="section section-alt">
+    <div class="wrap">
+      <div class="two-col">
+        <div class="prose">
+          <span class="eyebrow">Definition</span>
+          <h2>An embedded chip, not a plastic card</h2>
+          <p>An eSIM is a chip, not a card. Technically it is an <strong>eUICC</strong> — an embedded Universal Integrated Circuit Card — a small, tamper-resistant secure element soldered directly onto the device's mainboard in the factory. It holds the same cryptographic identity material as a plastic SIM and performs the same function: it authenticates the device to a mobile network. What it removes is everything physical. There is no tray to open, no card to punch out, no stock to hold, nothing to ship and nothing to lose.</p>
+          <p>A physical SIM is a removable smart card in one of three mechanical formats — mini, micro or nano — that the customer inserts into a slot. Changing operator means changing the card. Buying a travel SIM at the airport means finding a shop, presenting ID and swapping the card over. An eSIM replaces that whole ritual with a download. The operator's <strong>profile</strong> — its identity, its keys and its rate plan — is delivered over the internet to a chip that is already inside the phone.</p>
+          <p>Because the eUICC is soldered in and standardised by the GSMA, it can hold several profiles at once and switch between them in software. A traveller can leave a home line active for calls and messages while running a local data profile for the trip, and can remove or reinstall profiles without touching any hardware.</p>
+          <p>For a business, the practical consequence is that connectivity becomes a software product. It is created on demand, delivered instantly, priced per unit and reconciled in a billing system — rather than being a stock item with a shelf life, a freight cost and a customs declaration attached to every unit.</p>
+        </div>
+
+        <div>
+          <div class="card card-flat">
+            <div class="card-icon" data-icon="layers"></div>
+            <h3>The three things that actually change</h3>
+            <ul class="checklist">
+              <li><span data-icon="check"></span><span><strong>Delivery.</strong> A profile arrives as a QR code or an install link, not as a parcel.</span></li>
+              <li><span data-icon="check"></span><span><strong>Flexibility.</strong> One device can hold multiple operator profiles and switch between them in software.</span></li>
+              <li><span data-icon="check"></span><span><strong>Ownership.</strong> The chip belongs to the device; the profile is a subscription that can be issued, revoked and re-issued remotely.</span></li>
+            </ul>
+          </div>
+
+          <div class="callout mt-3">
+            <div class="callout-title"><span data-icon="info"></span>The short version</div>
+            <p>Same security model as a SIM card, none of the physical supply chain. That is the entire idea, and it is why eSIM changes the unit economics of selling travel connectivity.</p>
+          </div>
+
+          <div class="grid grid-2 mt-3">
+            <div class="card card-flat">
+              <h3>Physical SIM</h3>
+              <ul class="checklist x">
+                <li><span data-icon="cross"></span><span>Removable card, mechanical slot</span></li>
+                <li><span data-icon="cross"></span><span>Stock, freight and customs</span></li>
+                <li><span data-icon="cross"></span><span>One operator at a time</span></li>
+              </ul>
+            </div>
+            <div class="card card-flat">
+              <h3>eSIM</h3>
+              <ul class="checklist">
+                <li><span data-icon="check"></span><span>Soldered eUICC, no slot</span></li>
+                <li><span data-icon="check"></span><span>Delivered over the air</span></li>
+                <li><span data-icon="check"></span><span>Several profiles, software switching</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================== REMOTE PROVISIONING -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">How it works</span>
+        <h2>Remote provisioning, step by step</h2>
+        <p class="lead">Remote SIM provisioning (RSP) is the mechanism that puts an operator profile onto a chip the customer cannot physically reach. For consumer devices the governing specification is GSMA <strong>SGP.22</strong>. Five things happen, in this order.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="step">
+          <span class="step-num">1</span>
+          <h3>The operator builds a profile</h3>
+          <p>The MNO or MVNO — or a wholesale platform operating as an MVNO — creates a subscriber profile: IMSI, authentication keys, network access rules, data allowance and validity period.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">2</span>
+          <h3>SM-DP+ stores it securely</h3>
+          <p>The profile is encrypted and held on an <strong>SM-DP+</strong> (Subscription Manager — Data Preparation plus), the GSMA-certified server that prepares, stores and delivers profiles. What leaves the server is a binding: an activation code and a matching ID.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">3</span>
+          <h3>The customer gets a QR code or link</h3>
+          <p>Nothing is shipped. Your customer receives a QR code, a one-tap install link, or an in-app push. The code contains the SM-DP+ address and a matching ID — never the profile itself, so a screenshot alone is not a usable credential.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">4</span>
+          <h3>The profile downloads over the air</h3>
+          <p>The device contacts the SM-DP+, authenticates with its own <strong>EID</strong>, and pulls the encrypted profile down over Wi-Fi or mobile data — before departure, at the airport or on arrival. There is no network visit and no SIM swap.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">5</span>
+          <h3>The LPA installs and enables it</h3>
+          <p>The <strong>LPA</strong> (Local Profile Assistant) built into the device operating system decrypts, installs and enables the profile. The handset now holds a network identity, and the operator's core network sees an ordinary subscriber.</p>
+        </div>
+      </div>
+
+      <div class="mt-4">
+        <h3 class="mb-3">The vocabulary you will hear in every technical conversation</h3>
+        <div class="kv">
+          <div class="kv-row"><div class="kv-k">eSIM</div><div class="kv-v">The industry's shorthand for the embedded SIM: the chip plus the remote provisioning system around it. Strictly speaking the chip is the eUICC; "eSIM" is the commercial name.</div></div>
+          <div class="kv-row"><div class="kv-k">eUICC</div><div class="kv-v">Embedded Universal Integrated Circuit Card. The soldered secure element that stores and runs profiles. The GSMA specifications define how it is built and managed.</div></div>
+          <div class="kv-row"><div class="kv-k">Profile</div><div class="kv-v">The operator's subscription in software form: identity, credentials, policies and tariff. Installing a profile is the eSIM equivalent of inserting a SIM card.</div></div>
+          <div class="kv-row"><div class="kv-k">SM-DP+</div><div class="kv-v">Subscription Manager — Data Preparation plus. Prepares, stores and delivers profiles to devices. It is the server your platform talks to when it issues an order. In the older M2M architecture the equivalent role was split with an SM-SR (below).</div></div>
+          <div class="kv-row"><div class="kv-k">SM-SR</div><div class="kv-v">Subscription Manager — Secure Routing. In the earlier GSMA M2M architecture (SGP.02) it carried management commands to the eUICC over the air. The consumer SGP.22 model that travel eSIMs use removes it from the consumer flow, which is one reason consumer provisioning is simpler than the M2M generation.</div></div>
+          <div class="kv-row"><div class="kv-k">LPA</div><div class="kv-v">Local Profile Assistant. The software on the device that downloads, installs, enables, disables and deletes profiles. It is what makes the customer able to self-install without a shop visit.</div></div>
+          <div class="kv-row"><div class="kv-k">EID</div><div class="kv-v">eUICC Identifier. The unique, permanent serial number of the embedded chip inside a specific device. It identifies the hardware — not the subscription — and is what the SM-DP+ uses to bind a profile to the right device.</div></div>
+          <div class="kv-row"><div class="kv-k">ICCID</div><div class="kv-v">Integrated Circuit Card Identifier. The serial number of the profile itself. It is printed on a plastic SIM, and in an eSIM it exists only as data — which is why it is the reference you will quote when you raise a support ticket.</div></div>
+          <div class="kv-row"><div class="kv-k">QR activation code</div><div class="kv-v">The scannable code handed to the customer. It encodes the SM-DP+ address and a matching ID, and is the fulfilment artefact that replaces a shipped card and a printed PIN letter.</div></div>
+          <div class="kv-row"><div class="kv-k">Matching ID</div><div class="kv-v">The one-time token inside the activation code that points the device to one specific prepared profile on the SM-DP+. It is the join between your order record and the profile on the server.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ ESIM VS PHYSICAL SIM -->
+  <section class="section section-alt">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Comparison</span>
+        <h2>eSIM versus physical SIM, honestly compared</h2>
+        <p class="lead">Both formats authenticate a device to a network. The differences are entirely in the supply chain, the customer experience and the compliance burden — which is where your operating cost lives.</p>
+      </div>
+
+      <div class="table-scroll">
+        <table class="data">
+          <thead>
+            <tr><th>Dimension</th><th>eSIM</th><th>Physical SIM</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="country-cell">Inventory</td>
+              <td>None. Profiles are digital and issued on demand, so there is no dead stock and no forecast risk on a season you cannot predict.</td>
+              <td>Physical stock sitting in a warehouse, a shop or a distributor's shelf, with a shelf life, shrinkage and write-off risk.</td>
+            </tr>
+            <tr>
+              <td class="country-cell">Logistics</td>
+              <td>Nothing shipped. Delivery is a QR code or install link by email, app, voucher or printed card.</td>
+              <td>Picking, packing, courier, tracking, failed deliveries and returns — per unit, per order.</td>
+            </tr>
+            <tr>
+              <td class="country-cell">Customs</td>
+              <td>Not applicable. No goods cross a border, so there is no declaration and no clearance delay.</td>
+              <td>Declarations, duties and clearance delays on cross-border shipments, plus the risk of a consignment being held.</td>
+            </tr>
+            <tr>
+              <td class="country-cell">Activation time</td>
+              <td>Typically minutes. The customer installs before departure over Wi-Fi or on arrival, at any hour, without a shop visit.</td>
+              <td>Requires physical insertion. At a destination this often means locating a shop, queueing and presenting identification.</td>
+            </tr>
+            <tr>
+              <td class="country-cell">Swap and replacement</td>
+              <td>The profile is revoked from the console and re-issued remotely. The customer never waits for a delivery.</td>
+              <td>A replacement must be picked, shipped and received — days of downtime and a real cost per incident.</td>
+            </tr>
+            <tr>
+              <td class="country-cell">Real-name registration burden</td>
+              <td>A data-only travel profile carries no local number, so it generally falls outside local SIM registration regimes. This must be confirmed market by market, not assumed.</td>
+              <td>Frequently requires local ID or passport registration, sometimes in person, and the obligation falls on whoever sells the card.</td>
+            </tr>
+            <tr>
+              <td class="country-cell">Environmental footprint</td>
+              <td>No plastic, no punched carrier, no packaging, no air freight.</td>
+              <td>Plastic card, carrier, packaging and freight for every single unit sold.</td>
+            </tr>
+            <tr>
+              <td class="country-cell">Suitability for corporate bulk</td>
+              <td>Scales per traveller with no procurement lead time; consolidated billing and usage visibility across the whole workforce.</td>
+              <td>Bulk stock, distribution, tracking and reconciliation overhead on every trip, with no central usage view.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note">The two formats are not mutually exclusive. Most partners we work with run eSIM as the default and keep a physical SIM line for customers whose handsets do not support an embedded chip — the same rate card, the same API, two delivery formats.</p>
+    </div>
+  </section>
+
+  <!-- ==================================================== DEVICE SUPPORT -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Devices</span>
+        <h2>Which handsets can actually use an eSIM</h2>
+        <p class="lead">Support is now broad enough that eSIM-only marketing is a reasonable default for most travel audiences — but not for all of them. Here is the honest picture.</p>
+      </div>
+
+      <div class="grid grid-4">
+        <article class="card card-flat">
+          <div class="card-icon" data-icon="check"></div>
+          <h3>Apple</h3>
+          <p>Every iPhone from the XS and XR onwards supports eSIM. That covers essentially the entire active iPhone base in a typical travel market.</p>
+        </article>
+        <article class="card card-flat">
+          <div class="card-icon teal" data-icon="check"></div>
+          <h3>Samsung</h3>
+          <p>Most Galaxy S20-and-later flagships, the Z Fold and Z Flip families and the recent Note and A-series models carry eSIM support.</p>
+        </article>
+        <article class="card card-flat">
+          <div class="card-icon" data-icon="check"></div>
+          <h3>Google</h3>
+          <p>Pixel 3 and every later generation. Google has been among the most consistent supporters of the standard.</p>
+        </article>
+        <article class="card card-flat">
+          <div class="card-icon teal" data-icon="check"></div>
+          <h3>Everyone else</h3>
+          <p>Huawei, Xiaomi, OPPO, vivo, Honor and Motorola support is growing quickly, particularly on flagship and upper mid-range models.</p>
+        </article>
+      </div>
+
+      <div class="two-col mt-4">
+        <div class="prose">
+          <h3>Twelve markets where there is no SIM tray at all</h3>
+          <p>This is the development that turns eSIM from a convenience into a necessity. Apple has now removed the physical SIM tray entirely in twelve markets. A traveller who buys their handset in any of them has <strong>no slot to put a local SIM card into</strong> — for inbound visitors from those markets, an eSIM is not the better option, it is the only option.</p>
+          <p>It also works in the other direction. A customer in one of those markets who travels without arranging data before departure has no fallback: there is no airport kiosk that can help them.</p>
+          <div class="badge-row mt-3">
+            <span class="badge badge-brand">United States</span>
+            <span class="badge badge-brand">Canada</span>
+            <span class="badge badge-brand">Mexico</span>
+            <span class="badge badge-brand">Japan</span>
+            <span class="badge badge-brand">Guam</span>
+            <span class="badge badge-brand">US Virgin Islands</span>
+            <span class="badge badge-brand">Bahrain</span>
+            <span class="badge badge-brand">Kuwait</span>
+            <span class="badge badge-brand">Oman</span>
+            <span class="badge badge-brand">Qatar</span>
+            <span class="badge badge-brand">Saudi Arabia</span>
+            <span class="badge badge-brand">United Arab Emirates</span>
+          </div>
+          <p class="tiny muted mt-2">Source: <a href="https://www.macobserver.com/tips/round-ups/iphone-18-pro-esim-only-12-countries-full-list-travelers/" rel="noopener" target="_blank">MacObserver — the full list of eSIM-only markets</a>.</p>
+        </div>
+
+        <div>
+          <div class="card">
+            <div class="card-icon" data-icon="info"></div>
+            <h3>What this means when you sell</h3>
+            <ul class="checklist mt-1">
+              <li><span data-icon="check"></span><span>For inbound travellers from those twelve markets, offer eSIM first — there is no physical alternative to fall back on.</span></li>
+              <li><span data-icon="check"></span><span>Ask one qualifying question at checkout: handset model. It separates the eSIM-only customers from the ones who still need a card.</span></li>
+              <li><span data-icon="check"></span><span>Keep a physical SIM line for older handsets and for corporate buyers with mixed device fleets.</span></li>
+              <li><span data-icon="check"></span><span>Pre-departure is the moment of sale. Once the customer is airside, the only install path is Wi-Fi — and the only competitor is the airport kiosk.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================== SGP.22 VS SGP.32 -->
+  <section class="section section-alt">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Standards</span>
+        <h2>SGP.22 and SGP.32 are not the same thing</h2>
+        <p class="lead">One of these powers every consumer travel eSIM sold today. The other is an IoT specification that is only now reaching commercial deployment. Suppliers sometimes blur the two. Do not let them.</p>
+      </div>
+
+      <div class="grid grid-2">
+        <article class="card">
+          <div class="card-icon" data-icon="phone"></div>
+          <h3>SGP.22 — consumer RSP</h3>
+          <p><strong>The standard that travel eSIMs actually run on.</strong> Profiles are pulled to a device by the person holding it: they scan a QR code or tap an install link, and the Local Profile Assistant on the phone downloads and installs the profile.</p>
+          <p>It assumes a device with a user interface and a human to drive it. Profile switching is manual — the customer decides which line is active, and the handset's own settings screen carries the controls.</p>
+          <p class="small muted">Mature, widely certified, and the basis on which every mainstream travel eSIM product — including ours — is delivered today.</p>
+        </article>
+
+        <article class="card">
+          <div class="card-icon teal" data-icon="layers"></div>
+          <h3>SGP.32 — IoT RSP</h3>
+          <p><strong>The specification for devices with no screen and sometimes no user at all.</strong> It adds an <strong>eSIM IoT Manager (eIM)</strong> and an <strong>IPA</strong>, the IoT Profile Assistant, so that a fleet operator can provision, switch and manage profiles across thousands of devices from one platform.</p>
+          <p>Nothing has to be scanned. A tracker, a meter, a connected vehicle or an industrial gateway can be re-provisioned remotely, by software, at scale — which is exactly what the earlier M2M generation struggled to do efficiently.</p>
+          <p class="small muted">Commercially important for fleet and IoT buyers. It is not what a consumer travel eSIM runs on.</p>
+        </article>
+      </div>
+
+      <div class="two-col mt-4">
+        <div class="prose">
+          <h3>Where SGP.32 actually stands</h3>
+          <p>First commercial SGP.32 launches began in the second half of 2025, and Kaleido Intelligence forecasts roughly <strong>50 million SGP.32-compliant eSIMs to be managed globally by 2027</strong> — a meaningful fleet number, but a fraction of the consumer base and still ahead of most deployments.</p>
+          <p class="tiny muted">Source: <a href="https://www.thefastmode.com/technology-and-solution-trends/41601-kaleido-intelligence-esim-market-growth-to-reach-4-5-billion-by-2030" rel="noopener" target="_blank">Kaleido Intelligence, via The Fast Mode</a>. For a plain comparison of the SGP.02, SGP.22 and SGP.32 generations, see <a href="https://onomondo.com/blog/sgp-02-vs-sgp-22-vs-sgp-32/" rel="noopener" target="_blank">Onomondo's technical summary</a>.</p>
+        </div>
+
+        <div class="callout warn">
+          <div class="callout-title"><span data-icon="alert"></span>Be careful how SGP.32 is sold to you</div>
+          <p>SGP.32 is <strong>not yet a mature consumer proposition</strong>. It is an IoT specification with a small number of early commercial deployments, and the consumer ecosystem — device certification, carrier support, the app layer a traveller would touch — is not there.</p>
+          <p>If a supplier offers you SGP.32 as a live, consumer-ready capability for a travel product, ask for the <strong>named commercial deployment</strong> it is running on, in production, with volumes. If there is no name, there is no deployment, and what you are being sold is a roadmap.</p>
+          <p>For a travel eSIM business today, the standard you are actually buying is SGP.22.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================ DATA ONLY VS VOICE -->
+  <section class="section">
+    <div class="wrap">
+      <div class="two-col">
+        <div class="prose">
+          <span class="eyebrow">Regulation</span>
+          <h2>Data-only versus voice and SMS — and why the difference is commercial</h2>
+          <p>Most travel eSIM products are data-only, and that is not an accident of technology. It is a compliance position with a direct effect on your operating cost.</p>
+          <p>Mandatory SIM registration is now the norm rather than the exception: more than <strong>155 countries</strong> have SIM registration laws in force, together covering over <strong>60% of global mobile connections</strong>, according to the GSMA's regulatory tracker. Those regimes exist to attach a verified identity to a mobile number.</p>
+          <p>A data-only travel profile is issued <strong>no local phone number</strong> — no MSISDN. The registration obligation attaches to the assignment of a local number, so a profile that never receives one generally sits outside the regime. That is a structural advantage rather than a loophole, but it is not self-certifying: the rules differ by market, and some jurisdictions write them more broadly than others. It has to be confirmed country by country, which is work a wholesale supplier should do on your behalf.</p>
+          <p>Voice and SMS are available as an option in selected markets. Where you take them, a local number is assigned, and with it the registration duties come back — as does the ability to serve customers who genuinely need a local number for calls or verification codes. The trade is explicit: reach versus compliance overhead.</p>
+          <p class="tiny muted">Source: <a href="https://www.gsma.com/solutions-and-impact/connectivity-for-good/public-policy/gsma-regulatory-guidance/mandatory-sim-registration/" rel="noopener" target="_blank">GSMA — mandatory SIM registration guidance</a>.</p>
+        </div>
+
+        <div>
+          <div class="callout ok">
+            <div class="callout-title"><span data-icon="shield"></span>Hong Kong: a concrete argument for the eSIM route</div>
+            <p>Hong Kong's registration regime under the <strong>Telecommunications (Registration of SIM Cards) Regulation (Cap. 106AI)</strong> caps how many pre-paid SIM cards one subscriber may hold with a single operator:</p>
+            <ul class="mt-1">
+              <li><strong>Individuals:</strong> up to <strong>10 pre-paid SIM cards</strong> per operator.</li>
+              <li><strong>Corporates:</strong> up to <strong>25 pre-paid SIM cards</strong> per operator.</li>
+              <li><strong>Service-plan SIMs (SSP):</strong> <strong>no cap</strong> — the quota applies to pre-paid cards, not to subscription-plan SIMs.</li>
+            </ul>
+            <p>For a distributor, an agency or a corporate travel desk that needs to equip hundreds of travellers, that cap is a hard ceiling on the physical-card route unless every card is registered against a named individual. A data-only eSIM profile carries no local number and no pre-paid SIM registration quota in the same way — which is why corporate channels that have hit the ceiling are the fastest-moving adopters of the eSIM format.</p>
+            <p class="tiny muted">Source: <a href="https://www.ofca.gov.hk/en/consumer_focus/guide/hot_topics/sim_registration/index.html" rel="noopener" target="_blank">OFCA — SIM card registration</a>. Registration rules change; confirm the current position for your market before you rely on it in a contract.</p>
+          </div>
+
+          <div class="card card-flat mt-3">
+            <div class="card-icon" data-icon="info"></div>
+            <h3>What to ask a supplier before you commit</h3>
+            <ul class="checklist mt-1">
+              <li><span data-icon="check"></span><span>Is the profile data-only, or does it assign a local number?</span></li>
+              <li><span data-icon="check"></span><span>Who is the legal seller of record, and who carries the registration duty in each market?</span></li>
+              <li><span data-icon="check"></span><span>If voice or SMS is offered, is the number local, and what registration does it trigger?</span></li>
+              <li><span data-icon="check"></span><span>Can you produce the compliance position in writing for the specific destinations we sell?</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================ NETWORK BACKGROUND -->
+  <section class="section section-alt">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Our background</span>
+        <h2>The network behind the wholesale platform</h2>
+        <p class="lead">A reseller buys data from someone else. What sits behind this platform is our own network infrastructure, our own billing and our own interconnect — which is what makes rate control and activation reliability possible rather than aspirational.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <article class="card card-flat">
+          <div class="card-icon" data-icon="globe"></div>
+          <h3>Hong Kong and Guangzhou operations</h3>
+          <p>Our operations run across two locations: Hong Kong and Guangzhou. That gives us engineering and commercial presence in the same region as the Greater Bay Area's outbound travel market, and a Cantonese and Mandarin-speaking operation for the mainland and Hong Kong channels.</p>
+        </article>
+        <article class="card card-flat">
+          <div class="card-icon teal" data-icon="layers"></div>
+          <h3>Our own 4G core and billing in Hong Kong</h3>
+          <p>We operate our own 4G mobile core network and our own billing system in Hong Kong, and have been providing mobile service since the first quarter of 2016. Owning the core and the billing means usage is measured and rated by us, not reported to us by a third party.</p>
+        </article>
+        <article class="card card-flat">
+          <div class="card-icon" data-icon="users"></div>
+          <h3>Call centre and billing in Guangzhou</h3>
+          <p>Our call centre and billing operation is established in Guangzhou. Support and settlement are handled by our own team rather than outsourced to a platform vendor, so a profile issue is resolved by the people who can actually touch the profile.</p>
+        </article>
+        <article class="card card-flat">
+          <div class="card-icon teal" data-icon="bolt"></div>
+          <h3>Mainland and regional interconnect</h3>
+          <p>We are interconnected with China Mobile, China Unicom, China Mobile Hong Kong, Hutchison 3 Hong Kong, SmarTone Hong Kong, CITIC Telecom and China Telecom Macau. Direct interconnect is what determines both the cost per GB we can offer and how a profile behaves on the ground.</p>
+        </article>
+        <article class="card card-flat">
+          <div class="card-icon" data-icon="phone"></div>
+          <h3>International voice and SMS termination</h3>
+          <p>We carry international voice and SMS termination. That capability is what makes a voice or SMS option in selected markets a genuine product rather than a resold add-on.</p>
+        </article>
+        <article class="card card-flat">
+          <div class="card-icon teal" data-icon="shield"></div>
+          <h3>Number portability across Hong Kong</h3>
+          <p>We are interconnected with all Hong Kong MNOs and MVNOs for number portability — the same interconnection discipline that lets a corporate customer move lines without changing numbers, and that keeps our Hong Kong supply multi-sourced rather than dependent on a single network.</p>
+        </article>
+      </div>
+
+      <div class="callout mt-4">
+        <div class="callout-title"><span data-icon="info"></span>Why this matters to a distributor</div>
+        <p>Rate cards in this industry are usually a markup on somebody else's wholesale price, which means they move when that price moves. Direct interconnect, an owned core and owned billing change the shape of that conversation: rates are set from our own cost base, usage is measured at our own core, and a rate can be held for a committed volume.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================= CTA -->
+  <section class="section">
+    <div class="wrap">
+      <div class="hero" style="border-radius:22px;overflow:hidden">
+        <div class="hero-inner" style="padding:clamp(38px,5vw,64px)">
+          <div class="two-col" style="align-items:center">
+            <div>
+              <h2 style="color:#fff">Now you know what an eSIM is. Here is what it costs.</h2>
+              <p style="color:rgba(255,255,255,.78);margin-bottom:0">Tell us your destinations and your volumes and we will send a costed proposal, with a pilot if you want to test the network before you commit to it.</p>
+            </div>
+            <div class="btn-row" style="justify-content:flex-start">
+              <a class="btn btn-white btn-lg" href="enquiry.html" data-i18n="cta.enquireNow">Make an enquiry</a>
+              <a class="btn btn-on-dark btn-lg" href="order.html" data-i18n="cta.placeOrder">Build an order</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <img class="brand-mark" src="assets/img/logo.svg" alt="" width="34" height="34">
+          <span class="brand-text">
+            <span class="brand-name" data-brand-name>Global eSIM</span>
+            <span class="brand-sub">B2B Wholesale</span>
+          </span>
+        </a>
+        <p class="small" data-brand-tagline style="margin-top:14px;max-width:36ch"></p>
+        <div class="social mt-2" data-social></div>
+      </div>
+
+      <div>
+        <h3 data-i18n="footer.quickLinks">Quick links</h3>
+        <ul class="footer-list">
+          <li><a href="about.html" data-i18n="nav.background">eSIM Background</a></li>
+          <li><a href="market.html" data-i18n="nav.market">Market Potential</a></li>
+          <li><a href="solutions.html" data-i18n="nav.solutions">Partner Solutions</a></li>
+          <li><a href="coverage.html" data-i18n="nav.coverage">Coverage &amp; Rates</a></li>
+          <li><a href="videos.html" data-i18n="nav.videos">Videos</a></li>
+          <li><a href="faq.html" data-i18n="nav.faq">FAQ</a></li>
+          <li><a href="order.html" data-i18n="nav.order">Place an Order</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 data-i18n="footer.getInTouch">Get in touch</h3>
+        <ul class="footer-list">
+          <li><a data-contact="email" href="#">commercialisation.ai@gmail.com</a></li>
+          <li>WhatsApp: <a data-contact="whatsapp" href="#">+852 9739 8018</a></li>
+          <li>WeChat: <strong data-contact="wechat">ZhuangChengHK</strong></li>
+          <li><span data-i18n="footer.hours">Business hours</span>: <span data-contact="hours"></span></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 data-i18n="footer.legal">Legal</h3>
+        <ul class="footer-list">
+          <li><a href="privacy.html" data-i18n="footer.privacy">Privacy policy</a></li>
+          <li><a href="terms.html" data-i18n="footer.terms">Terms of use</a></li>
+          <li><a href="demo.html" data-i18n="cta.bookDemo">Book a demo</a></li>
+          <li><a href="enquiry.html" data-i18n="nav.enquiry">Enquiry</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> <span data-brand-name>Global eSIM</span>. <span data-i18n="footer.rights">All rights reserved.</span></span>
+    </div>
+    <p class="footer-disclaimer" data-i18n="footer.disclaimer">Rates and commercial terms shown on this site are indicative and subject to confirmation in a signed partner agreement.</p>
+  </div>
+</footer>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/i18n.en.js"></script>
+<script src="assets/js/i18n.zh-TW.js"></script>
+<script src="assets/js/i18n.zh-CN.js"></script>
+<script src="assets/js/i18n.ja.js"></script>
+<script src="assets/js/i18n.ko.js"></script>
+<script src="assets/js/i18n.fr.js"></script>
+<script src="assets/js/i18n.es.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

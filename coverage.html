@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coverage &amp; Rates — Global eSIM B2B Wholesale</title>
+<meta name="description" content="Indicative wholesale travel eSIM coverage and rates: 68 countries, 94 network partners, 3G/4G/5G, partner rates from HK$8 per GB. Search and filter every country, see the network partners behind it, and learn how to turn a per-GB rate into a retail bundle.">
+<meta name="theme-color" content="#0A1020">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://www.example.com/coverage.html">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Coverage &amp; Rates — Global eSIM B2B Wholesale">
+<meta property="og:description" content="68 countries, 94 network partners, 3G/4G/5G and lowest indicative partner rates from HK$8 per GB. Searchable country table with the network partners behind each market.">
+<meta property="og:image" content="assets/img/logo.svg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="stylesheet" href="assets/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Coverage & Rates",
+  "description": "Indicative wholesale travel eSIM coverage and partner rate information across 68 countries and 94 network partners.",
+  "inLanguage": "en",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Global eSIM",
+    "url": "https://www.example.com/"
+  }
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html">
+      <img class="brand-mark" src="assets/img/logo.svg" alt="" width="34" height="34">
+      <span class="brand-text">
+        <span class="brand-name" data-brand-name>Global eSIM</span>
+        <span class="brand-sub">B2B Wholesale</span>
+      </span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main navigation">
+      <a href="about.html"    data-i18n="nav.background">eSIM Background</a>
+      <a href="market.html"   data-i18n="nav.market">Market Potential</a>
+      <a href="solutions.html" data-i18n="nav.solutions">Partner Solutions</a>
+      <a href="coverage.html" data-i18n="nav.coverage">Coverage &amp; Rates</a>
+      <a href="videos.html"   data-i18n="nav.videos">Videos</a>
+      <a href="faq.html"      data-i18n="nav.faq">FAQ</a>
+      <a href="contact.html"  data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <div class="lang" data-lang-switcher></div>
+      <a class="btn btn-primary btn-sm" href="demo.html" data-i18n="cta.bookDemo">Book a demo</a>
+      <a class="btn btn-ghost btn-sm" href="order.html" data-i18n="cta.placeOrder">Build an order</a>
+      <button class="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============================================================ HERO -->
+  <section class="hero-compact">
+    <div class="wrap">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html" data-i18n="nav.home">Home</a> / <span data-i18n="nav.coverage">Coverage &amp; Rates</span>
+      </nav>
+      <span class="eyebrow">Coverage</span>
+      <h1>Coverage &amp; indicative rates</h1>
+      <p class="lead">Every country we can activate today, the network partners behind each market, and the lowest indicative partner rate per GB — published openly rather than hidden behind a sales call.</p>
+    </div>
+  </section>
+
+  <!-- =========================================================== STATS -->
+  <section class="section-tight">
+    <div class="wrap">
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-num" data-cov-countries>68</div>
+          <div class="stat-label">Countries in the coverage list</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num" data-cov-nets>94</div>
+          <div class="stat-label">Network partners</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">HK$8<span class="u">/GB</span></div>
+          <div class="stat-label">Lowest indicative rate</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">3G<span class="u">/4G/5G</span></div>
+          <div class="stat-label">Technologies in the network</div>
+        </div>
+      </div>
+      <p class="table-note" data-cov-note hidden></p>
+    </div>
+  </section>
+
+  <!-- ================================================= REGION SUMMARY -->
+  <section class="section section-alt">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Regions</span>
+        <h2>Nine regions at a glance</h2>
+        <p class="lead">Rendered from the rate data itself: the entry rate for the region, how many countries and network partners sit behind it, and the technologies those partners run.</p>
+      </div>
+
+      <div class="grid grid-3" data-cov-regions></div>
+    </div>
+  </section>
+
+  <!-- =================================================== COUNTRY TABLE -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Full list</span>
+        <h2>All 68 countries</h2>
+        <p class="lead">Search by country, Chinese name or network partner, or filter to a single region. The rate shown is the lowest indicative partner rate for that country, in HKD per GB.</p>
+      </div>
+
+      <div class="faq-toolbar">
+        <label class="search-box">
+          <span data-icon="search"></span>
+          <span class="sr-only">Search countries or network partners</span>
+          <input type="search" data-cov-search placeholder="Search country, 中文名 or network partner…" autocomplete="off">
+        </label>
+        <div class="chips" data-cov-chips></div>
+      </div>
+
+      <div class="table-scroll">
+        <table class="data">
+          <thead>
+            <tr>
+              <th scope="col">Country</th>
+              <th scope="col">Region</th>
+              <th scope="col" class="num">Networks</th>
+              <th scope="col">Technology</th>
+              <th scope="col" class="num">Indicative rate</th>
+              <th scope="col">Network partners</th>
+            </tr>
+          </thead>
+          <tbody data-cov-body></tbody>
+        </table>
+      </div>
+
+      <div class="dest-empty" data-cov-empty hidden>Nothing matches that search. Try a country name, a Chinese name or a network partner — or clear the region filter.</div>
+      <p class="table-note" data-cov-count></p>
+      <p class="table-note" data-cov-source></p>
+    </div>
+  </section>
+
+  <!-- ==================================================== READ RATES -->
+  <section class="section section-alt">
+    <div class="wrap">
+      <div class="two-col">
+        <div>
+          <span class="eyebrow">How to read these rates</span>
+          <h2>What the number actually means</h2>
+          <div class="prose">
+            <p>The figure shown against a country is the <strong>lowest indicative partner rate across all of the listed network partners for that country, in HKD per GB</strong>. It is a floor, not an average, and not a retail price.</p>
+            <p>Rates are set <strong>per country and per network partner</strong>, and the technology tier behind them varies by market. Two partners in the same country can sit on different technologies and different rates — a 5G partner and a 3G partner are not interchangeable products, even though both appear under one country row.</p>
+            <p>The technology badges show what is available in the market, not what every partner runs. Where a market shows 3G only, the wholesale cost of moving that market to 4G or 5G is a commercial conversation, not a setting.</p>
+            <p><strong>The full per-network rate card is released under NDA after partner verification.</strong> That card breaks the country figure into each individual network partner, with the rate, the technology tier and the available bundle sizes for each.</p>
+            <p>Volume tiers reduce the per-unit SIM price as order quantity grows, from HK$5 per card at 500–4,999 pcs down to HK$3 at 20,000+ pcs. <strong>30 days' written notice</strong> is given before any cost or offer change.</p>
+          </div>
+        </div>
+
+        <div class="side-sticky">
+          <div class="callout warn">
+            <div class="callout-title"><span data-icon="alert"></span>Indicative figures, not a quotation</div>
+            <p>These figures are <strong>indicative, published for orientation only</strong>. A binding quotation is issued after network availability and volume pricing are confirmed. Rates move with wholesale cost, currency and local network conditions, so nothing on this page is an offer capable of acceptance.</p>
+          </div>
+
+          <div class="card card-flat mt-3">
+            <h3>Why publish a floor rate at all</h3>
+            <p>Most wholesale eSIM pricing is only revealed after a sales call. Publishing the floor lets you sanity-check whether a market is viable for your product before either side spends time on it.</p>
+            <p class="small muted mb-2">If a market looks expensive at the floor rate, the honest answer is usually that it is expensive — not that a discount is waiting.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================ DESIGN YOUR BUNDLE -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Designing your bundle</span>
+        <h2>From a per-GB rate to a retail product</h2>
+        <p class="lead">Three decisions turn a wholesale rate into something your customer can buy. All three are yours to make.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <article class="card card-hover">
+          <div class="card-icon" data-icon="globe"></div>
+          <h3>Choose the destination set</h3>
+          <p>Pick the markets your customers actually travel to. A single-country bundle, a regional bundle or a multi-region bundle each price differently, because the rate is drawn from the most expensive market in the set.</p>
+        </article>
+        <article class="card card-hover">
+          <div class="card-icon teal" data-icon="layers"></div>
+          <h3>Choose the bundle size</h3>
+          <p>Standard sizes are <strong>1, 3, 5, 10, 20 and 50 GB</strong>. Data cost is simply the per-GB rate multiplied by the size, so a bigger bundle carries a bigger absolute cost but the same rate per GB.</p>
+        </article>
+        <article class="card card-hover">
+          <div class="card-icon" data-icon="tag"></div>
+          <h3>Apply your own markup</h3>
+          <p>The retail price is <strong>your decision</strong>, not ours. Add a physical SIM cost if you are shipping cards: HK$5, HK$4 or HK$3 per card depending on order quantity.</p>
+        </article>
+      </div>
+
+      <div class="two-col mt-4">
+        <div>
+          <h3>Worked example — Singapore</h3>
+          <div class="kv mt-2">
+            <div class="kv-row">
+              <div class="kv-k">Destination</div>
+              <div class="kv-v">Singapore — indicative partner rate HK$8 / GB, 2 network partners, 5G</div>
+            </div>
+            <div class="kv-row">
+              <div class="kv-k">Bundle size</div>
+              <div class="kv-v">5 GB</div>
+            </div>
+            <div class="kv-row">
+              <div class="kv-k">Data cost to you</div>
+              <div class="kv-v"><strong>HK$40</strong> &nbsp;(HK$8 &times; 5 GB)</div>
+            </div>
+            <div class="kv-row">
+              <div class="kv-k">Physical SIM card</div>
+              <div class="kv-v">HK$0 for eSIM, or HK$5 / HK$4 / HK$3 per card by volume tier</div>
+            </div>
+            <div class="kv-row">
+              <div class="kv-k">Your retail price</div>
+              <div class="kv-v">Your decision — HK$40 is the floor cost, not a suggested price</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card card-flat side-sticky">
+          <h3>What the example shows</h3>
+          <p>A 5 GB Singapore bundle costs HK$40 in data. If you sell it at HK$98, your gross margin before payment fees is HK$58. If you ship a physical card at the HK$5 tier, the same bundle costs HK$45 and the margin is HK$53.</p>
+          <p>A 5 GB Europe bundle at the HK$40 / GB regional rate costs HK$200 in data, so the retail price has to be materially higher — or the bundle smaller — for the same percentage margin.</p>
+          <div class="callout ok mt-2">
+            <div class="callout-title"><span data-icon="info"></span>Margin is yours</div>
+            <p>We sell wholesale. What you charge your customer is entirely your commercial decision, and we do not compete with you on it.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================================== CTA -->
+  <section class="section section-alt">
+    <div class="wrap">
+      <div class="hero" style="border-radius:22px;overflow:hidden">
+        <div class="hero-inner" style="padding:clamp(38px,5vw,64px)">
+          <div class="two-col" style="align-items:center">
+            <div>
+              <h2 style="color:#fff">Request the full per-network rate card</h2>
+              <p style="color:rgba(255,255,255,.78);margin-bottom:0">Tell us which markets matter to you. We will send the per-network rates, the bundle sizes available in each market, and volume pricing for your expected quantity.</p>
+            </div>
+            <div class="btn-row" style="justify-content:flex-start">
+              <a class="btn btn-white btn-lg" href="enquiry.html" data-i18n="cta.requestRateCard">Request the full rate card</a>
+              <a class="btn btn-on-dark btn-lg" href="order.html" data-i18n="cta.placeOrder">Build an order</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       COVERAGE RENDERER
+       Self-contained. Reads window.COVERAGE_DATA (assets/js/coverage-data.js),
+       builds the region cards and the country table, and wires live search and
+       region filtering. Every value that comes from the data file is written
+       through textContent, so no data string is ever parsed as HTML.
+       ========================================================================== -->
+  <script>
+  (function () {
+    "use strict";
+
+    /* ------------------------------------------------------------------
+     * 1. Static configuration
+     * ------------------------------------------------------------------ */
+
+    // Region keys -> the names a reader recognises.
+    var REGION_NAMES = {
+      SOUTHEAST_ASIA: "Southeast Asia",
+      EAST_ASIA:      "East Asia",
+      CENTRAL_ASIA:   "Central Asia",
+      OCEANIA:        "Oceania",
+      NORTH_AMERICA:  "North America",
+      LATIN_AMERICA:  "Latin America",
+      EUROPE:         "Europe",
+      MIDDLE_EAST:    "Middle East",
+      AFRICA:         "Africa"
+    };
+
+    // Technology string -> the badge class that already exists in style.css.
+    var TECH_CLASS = { "3G": "badge badge-3g", "4G": "badge badge-4g", "5G": "badge badge-5g" };
+
+    var ALL_REGIONS = "__all__";
+
+    /* ------------------------------------------------------------------
+     * 2. Small helpers
+     * ------------------------------------------------------------------ */
+
+    function byId(sel) { return document.querySelector(sel); }
+
+    /** Element with a class name and optional text (always via textContent). */
+    function el(tag, className, text) {
+      var node = document.createElement(tag);
+      if (className) node.className = className;
+      if (text != null) node.textContent = String(text);
+      return node;
+    }
+
+    /** "HK$8 / GB" — never Math.min of an empty list, never NaN on screen. */
+    function rateText(value) {
+      var n = Number(value);
+      if (!isFinite(n)) return "Rate on request";
+      return "HK$" + n + " / GB";
+    }
+
+    function regionName(key) { return REGION_NAMES[key] || String(key || "").replace(/_/g, " "); }
+
+    /** Case/space-tolerant match used by the search box. */
+    function matches(text, term) { return String(text || "").toLowerCase().indexOf(term) !== -1; }
+
+    /** Fallback notice when coverage-data.js is unreachable. */
+    function showMessage(node, text) {
+      if (!node) return;
+      node.textContent = text;
+      node.hidden = false;
+    }
+
+    /* ------------------------------------------------------------------
+     * 3. Rendering
+     * ------------------------------------------------------------------ */
+
+    var DATA = null;                       // set in init()
+    var state = { region: ALL_REGIONS, q: "" };
+    var rowCache = [];                     // built once, then filtered in place
+
+    /** One region card, built entirely from regionStats. */
+    function buildRegionCard(key) {
+      var stats = (DATA.regionStats || {})[key] || {};
+      var card = el("div", "region-card");
+
+      var top = el("div", "rc-top");
+      top.appendChild(el("h3", null, regionName(key)));
+
+      var rate = el("span", "rc-rate", rateText(stats.from));
+      rate.appendChild(el("span", null, "/GB"));
+      top.appendChild(rate);
+      card.appendChild(top);
+
+      var techList = Array.isArray(stats.tech) && stats.tech.length ? stats.tech.join("/") : "n/a";
+      card.appendChild(el("div", "rc-meta",
+        (stats.countries || 0) + " countries · " + (stats.nets || 0) + " network partners · " + techList));
+
+      var names = DATA.countries
+        .filter(function (c) { return c.region === key; })
+        .map(function (c) { return c.country; });
+      card.appendChild(el("div", "rc-list", names.join(", ")));
+      // NOTE: rc-list is the only child here that carries real text content,
+      // so it is the natural search/filter hook for a region card.
+
+      return card;
+    }
+
+    function renderRegions() {
+      var host = byId("[data-cov-regions]");
+      if (!host) return;
+      host.textContent = "";
+      var order = Array.isArray(DATA.regionOrder) && DATA.regionOrder.length
+        ? DATA.regionOrder
+        : Object.keys(DATA.regionStats || {});
+      order.forEach(function (key) { host.appendChild(buildRegionCard(key)); });
+    }
+
+    /** One table row. Returned as an object so filtering never rebuilds the DOM. */
+    function buildRow(country) {
+      var tr = document.createElement("tr");
+      tr.setAttribute("data-region", country.region || "");
+
+      // Country — name plus the Traditional Chinese name as a muted suffix.
+      var tdCountry = document.createElement("td");
+      tdCountry.className = "country-cell";
+      tdCountry.appendChild(document.createTextNode(String(country.country || "")));
+      if (country.tc) {
+        tdCountry.appendChild(document.createTextNode(" "));
+        tdCountry.appendChild(el("span", "small muted", country.tc));
+      }
+      tr.appendChild(tdCountry);
+
+      tr.appendChild(el("td", null, regionName(country.region)));
+
+      var tdNets = el("td", "num", country.nets == null ? "—" : country.nets);
+      tr.appendChild(tdNets);
+
+      // Technology — one badge per entry in the tech array.
+      var tdTech = document.createElement("td");
+      var techRow = el("span", "badge-row");
+      (Array.isArray(country.tech) ? country.tech : []).forEach(function (t) {
+        techRow.appendChild(el("span", TECH_CLASS[t] || "badge", t));
+      });
+      tdTech.appendChild(techRow);
+      tr.appendChild(tdTech);
+
+      tr.appendChild(el("td", "num", rateText(country.from)));
+
+      var ops = Array.isArray(country.ops) ? country.ops.join(", ") : "";
+      tr.appendChild(el("td", "small muted", ops));
+
+      // Everything the search box may match on, lowercased once.
+      var haystack = [country.country, country.tc, country.region, regionName(country.region), ops]
+        .join(" ").toLowerCase();
+
+      return { tr: tr, region: country.region, haystack: haystack };
+    }
+
+    function buildRows() {
+      rowCache = (Array.isArray(DATA.countries) ? DATA.countries : []).map(buildRow);
+    }
+
+    function renderRows() {
+      var body = byId("[data-cov-body]");
+      var empty = byId("[data-cov-empty]");
+      var countEl = byId("[data-cov-count]");
+      if (!body) return;
+
+      var term = state.q.trim().toLowerCase();
+      var frag = document.createDocumentFragment();
+      var shown = 0;
+
+      rowCache.forEach(function (row) {
+        var regionOk = state.region === ALL_REGIONS || row.region === state.region;
+        var textOk = !term || row.haystack.indexOf(term) !== -1;
+        if (regionOk && textOk) { frag.appendChild(row.tr); shown++; }
+      });
+
+      body.textContent = "";
+      body.appendChild(frag);
+
+      if (empty) empty.hidden = shown !== 0;
+      if (countEl) {
+        var scope = state.region === ALL_REGIONS ? "all regions" : regionName(state.region);
+        countEl.textContent = shown + (shown === 1 ? " country" : " countries") + " shown · " + scope;
+      }
+    }
+
+    /** Region chips, built from regionOrder plus an "All regions" chip. */
+    function buildChips() {
+      var host = byId("[data-cov-chips]");
+      if (!host) return;
+      host.textContent = "";
+
+      var order = Array.isArray(DATA.regionOrder) && DATA.regionOrder.length
+        ? DATA.regionOrder
+        : Object.keys(DATA.regionStats || {});
+      var keys = [ALL_REGIONS].concat(order);
+
+      keys.forEach(function (key) {
+        var label = key === ALL_REGIONS ? "All regions" : regionName(key);
+        var chip = el("button", "chip", label);
+        chip.type = "button";
+        chip.setAttribute("aria-pressed", String(state.region === key));
+        chip.addEventListener("click", function () {
+          state.region = key;
+          buildChips();
+          renderRows();
+        });
+        host.appendChild(chip);
+      });
+    }
+
+    function wireSearch() {
+      var input = byId("[data-cov-search]");
+      if (!input) return;
+      input.addEventListener("input", function () {
+        state.q = input.value || "";
+        renderRows();
+      });
+    }
+
+    /** Footer notes: where the data came from and when it was reviewed. */
+    function renderNotes() {
+      var source = byId("[data-cov-source]");
+      if (source) {
+        source.textContent = "Source: " + (DATA.generatedFrom || "partner cost sheet") +
+          " · last reviewed " + (DATA.lastReviewed || "n/a") +
+          " · rates in " + (DATA.currency || "HKD") + " " + (DATA.unit || "per GB") +
+          ", lowest indicative partner rate across the listed network partners.";
+      }
+
+      var note = byId("[data-cov-note]");
+      if (note) {
+        var count = (Array.isArray(DATA.countries) ? DATA.countries : []).length;
+        var nets = (Array.isArray(DATA.countries) ? DATA.countries : [])
+          .reduce(function (a, c) { return a + (Number(c.nets) || 0); }, 0);
+        note.textContent = count + " countries · " + nets + " network partners · reviewed " +
+          (DATA.lastReviewed || "n/a") + " · all rates indicative, in " +
+          (DATA.currency || "HKD") + " " + (DATA.unit || "per GB") + ".";
+        note.hidden = false;
+      }
+
+      // The headline stats are data-driven too, so they can never drift.
+      var countStat = byId("[data-cov-countries]");
+      if (countStat) countStat.textContent = String((Array.isArray(DATA.countries) ? DATA.countries : []).length);
+      var netStat = byId("[data-cov-nets]");
+      if (netStat) {
+        netStat.textContent = String((Array.isArray(DATA.countries) ? DATA.countries : [])
+          .reduce(function (a, c) { return a + (Number(c.nets) || 0); }, 0));
+      }
+    }
+
+    /* ------------------------------------------------------------------
+     * 4. Boot
+     * ------------------------------------------------------------------ */
+
+    function boot() {
+      if (!DATA || !Array.isArray(DATA.countries) || !DATA.countries.length) {
+        // Missing or unreadable data: say so in plain language, never throw.
+        showMessage(byId("[data-cov-regions]"),
+          "Coverage data is temporarily unavailable. Please refresh, or contact us and we will send the current rate card directly.");
+        showMessage(byId("[data-cov-empty]"),
+          "The coverage data file could not be loaded, so the country table is unavailable. The notes below still describe how rates work.");
+        var countEl = byId("[data-cov-count]");
+        if (countEl) countEl.textContent = "";
+        return;
+      }
+
+      renderRegions();
+      buildRows();
+      buildChips();
+      wireSearch();
+      renderRows();
+      renderNotes();
+    }
+
+    function start() {
+      if (window.COVERAGE_DATA) {          // already on the page
+        DATA = window.COVERAGE_DATA;
+        boot();
+        return;
+      }
+      if (typeof window.COVERAGE_DATA === "undefined") { DATA = null; }
+      // Not loaded yet: fetch it on demand so the page still works if the
+      // coverage-data.js tag is ever moved or removed from the document.
+      var s = document.createElement("script");
+      s.src = "assets/js/coverage-data.js";
+      s.onload = function () { DATA = window.COVERAGE_DATA || null; boot(); };
+      s.onerror = function () { DATA = null; boot(); };
+      document.head.appendChild(s);
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", start);
+    } else {
+      start();
+    }
+  })();
+  </script>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <img class="brand-mark" src="assets/img/logo.svg" alt="" width="34" height="34">
+          <span class="brand-text">
+            <span class="brand-name" data-brand-name>Global eSIM</span>
+            <span class="brand-sub">B2B Wholesale</span>
+          </span>
+        </a>
+        <p class="small" data-brand-tagline style="margin-top:14px;max-width:36ch"></p>
+        <div class="social mt-2" data-social></div>
+      </div>
+
+      <div>
+        <h3 data-i18n="footer.quickLinks">Quick links</h3>
+        <ul class="footer-list">
+          <li><a href="about.html" data-i18n="nav.background">eSIM Background</a></li>
+          <li><a href="market.html" data-i18n="nav.market">Market Potential</a></li>
+          <li><a href="solutions.html" data-i18n="nav.solutions">Partner Solutions</a></li>
+          <li><a href="coverage.html" data-i18n="nav.coverage">Coverage &amp; Rates</a></li>
+          <li><a href="videos.html" data-i18n="nav.videos">Videos</a></li>
+          <li><a href="faq.html" data-i18n="nav.faq">FAQ</a></li>
+          <li><a href="order.html" data-i18n="nav.order">Place an Order</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 data-i18n="footer.getInTouch">Get in touch</h3>
+        <ul class="footer-list">
+          <li><a data-contact="email" href="#">commercialisation.ai@gmail.com</a></li>
+          <li>WhatsApp: <a data-contact="whatsapp" href="#">+852 9739 8018</a></li>
+          <li>WeChat: <strong data-contact="wechat">ZhuangChengHK</strong></li>
+          <li><span data-i18n="footer.hours">Business hours</span>: <span data-contact="hours"></span></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 data-i18n="footer.legal">Legal</h3>
+        <ul class="footer-list">
+          <li><a href="privacy.html" data-i18n="footer.privacy">Privacy policy</a></li>
+          <li><a href="terms.html" data-i18n="footer.terms">Terms of use</a></li>
+          <li><a href="demo.html" data-i18n="cta.bookDemo">Book a demo</a></li>
+          <li><a href="enquiry.html" data-i18n="nav.enquiry">Enquiry</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> <span data-brand-name>Global eSIM</span>. <span data-i18n="footer.rights">All rights reserved.</span></span>
+    </div>
+    <p class="footer-disclaimer" data-i18n="footer.disclaimer">Rates and commercial terms shown on this site are indicative and subject to confirmation in a signed partner agreement.</p>
+  </div>
+</footer>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/i18n.en.js"></script>
+<script src="assets/js/i18n.zh-TW.js"></script>
+<script src="assets/js/i18n.zh-CN.js"></script>
+<script src="assets/js/i18n.ja.js"></script>
+<script src="assets/js/i18n.ko.js"></script>
+<script src="assets/js/i18n.fr.js"></script>
+<script src="assets/js/i18n.es.js"></script>
+<script src="assets/js/coverage-data.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+# ---------------------------------------------------------------------------
+# Global eSIM website — files that should NOT be published
+# ---------------------------------------------------------------------------
+
+# Operating system cruft
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Editor and IDE folders
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node tooling (only needed if you run `npx serve` locally)
+node_modules/
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Local preview output
+_site/
+.cache/
+.sass-cache/
+
+# ---------------------------------------------------------------------------
+# CONFIDENTIAL SOURCE MATERIAL — keep these OUT of the public repository.
+#
+# The coverage table in assets/js/coverage-data.js is generated from the
+# partner cost sheet. Publishing the spreadsheet itself, the signed agreements,
+# invoices or the internal requirements document would expose your commercial
+# terms in full. Keep them local, or in a separate private repository.
+# ---------------------------------------------------------------------------
+*.xlsx
+*.docx
+*.pptx
+*.msg
+wechatbiz_cost_SIM*
+Master agreement*
+INVCMM*
+eSIM对接需求*
+whitelabel_2025*
+
+# ---------------------------------------------------------------------------
+# OPTIONAL — if you would rather not publish your wholesale rates at all,
+# uncomment the next line. The coverage table and the order builder will then
+# show coverage without prices. Also set showRates: false in config.js so the
+# rest of the site stops quoting figures.
+# ---------------------------------------------------------------------------
+# assets/js/coverage-data.js
+
+.next/
+
+.env
+
+.env.*
