@@ -307,7 +307,7 @@ for (const L of LANGS) {
 <meta name="theme-color" content="#0A1020">
 <meta name="robots" content="noindex, follow">
 <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
-<link rel="canonical" href="https://www.example.com/proposals/proposal-${L.code}.html">
+<link rel="canonical" href="https://ztarsbabe.com/proposals/proposal-${L.code}.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="${esc(h1)}">
 <meta property="og:description" content="Wholesale eSIM partnership proposal and demonstration request.">

@@ -1,0 +1,5 @@
+# https://ztarsbabe.com
+User-agent: *
+Allow: /
+
+Sitemap: https://ztarsbabe.com/sitemap.xml

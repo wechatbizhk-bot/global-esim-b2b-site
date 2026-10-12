@@ -238,7 +238,7 @@ window.SITE_CONFIG = {
    * -------------------------------------------------------------------*/
   site: {
     // Used for canonical URLs and Open Graph. Set to your live domain.
-    url: "https://www.example.com",
+    url: "https://ztarsbabe.com",
     // Default language on first visit. One of: en, ko, ja, zh-CN, zh-TW, fr, es
     defaultLang: "en",
     // Languages offered in the switcher, in display order.
