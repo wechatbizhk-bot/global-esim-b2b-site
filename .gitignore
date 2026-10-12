@@ -64,3 +64,5 @@ whitelabel_2025*
 .env
 
 .env.*
+.vercel
+.env*
