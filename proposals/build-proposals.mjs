@@ -308,10 +308,13 @@ for (const L of LANGS) {
 <meta name="robots" content="noindex, follow">
 <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
 <link rel="canonical" href="https://ztarsbabe.com/proposals/proposal-${L.code}.html">
+<meta property="og:url" content="https://ztarsbabe.com/proposals/proposal-${L.code}.html">
+<meta name="geo.region" content="HK">
+<meta name="geo.placename" content="Hong Kong">
 <meta property="og:type" content="article">
 <meta property="og:title" content="${esc(h1)}">
 <meta property="og:description" content="Wholesale eSIM partnership proposal and demonstration request.">
-<meta property="og:image" content="../assets/img/logo.svg">
+<meta property="og:image" content="https://ztarsbabe.com/assets/img/logo.svg">
 <link rel="stylesheet" href="../assets/css/style.css">
 ${LANG_BAR_CSS}
 </head>
