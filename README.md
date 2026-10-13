@@ -613,9 +613,39 @@ The full research brief with all 44 source URLs is available separately as
 
 ## Technical notes
 
-- **No dependencies at all.** No jQuery, no Bootstrap, no Google Fonts, no CDN, no
-  analytics. Every asset is served from your own domain. The site works fully offline and
-  loads in a single round trip.
+- **Search tags.** Public pages keep their existing canonical URL, hreflang set, sitemap
+  entries and JSON-LD. `og:image` and `twitter:image` are absolute
+  `https://ztarsbabe.com/assets/img/logo.svg` URLs. Each of those pages also carries
+  `geo.region` = `HK` and `geo.placename` = `Hong Kong`, next to the canonical and
+  hreflang tags. The geo tags identify the Hong Kong operating base of a worldwide B2B
+  service. Leave `assets/js/analytics-config.js` as an empty string until you have a real
+  GA4 measurement ID.
+- **Canonical host (www and the apex).** Canonicals, Open Graph, hreflang and
+  `sitemap.xml` all use `https://ztarsbabe.com`. `vercel.json` sets `cleanUrls` and
+  `trailingSlash` only, and this change leaves DNS records alone. `www.ztarsbabe.com`
+  already reaches the same Vercel project (`nfcsim`) and returns the site with HTTP 200.
+  Set **ztarsbabe.com** as the primary domain in that project (Settings → Domains) so
+  Vercel redirects `www` to the apex. Both hostnames are already attached, so that
+  setting needs no new DNS records. `cleanUrls: true` serves `/about` and redirects
+  `/about.html` to `/about`; canonicals still use the `.html` URLs and are left as they
+  are. A matching host redirect belongs in `vercel.json` only after `www` is confirmed
+  on this same project:
+
+  ```json
+  {
+    "source": "/:path*",
+    "has": [{ "type": "host", "value": "www.ztarsbabe.com" }],
+    "destination": "https://ztarsbabe.com/:path*",
+    "permanent": true
+  }
+  ```
+
+  Leave existing DNS where it is. A redirect in the repo only runs for a hostname that
+  already resolves to this deployment.
+- **No dependencies at all.** No jQuery, no Bootstrap, no Google Fonts, no CDN. Analytics
+  loads only when `assets/js/analytics-config.js` contains a real GA4 measurement ID.
+  Every asset is served from your own domain. The site works fully offline and
+  loads in a single round trip when that ID is empty.
 - **No build step.** Editing an HTML file or a JS file and refreshing is the whole workflow.
   That is why it deploys to GitHub Pages without any CI configuration.
 - **Accessibility.** Semantic landmarks (`header`, `nav`, `main`, `footer`), a skip link,
